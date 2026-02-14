@@ -13,14 +13,7 @@ const API_URL = 'https://api.apiverve.com/v1/unitconverter';
  */
 async function callUnitConverterAPI() {
   try {
-    // Query parameters
-    const params &#x3D; new URLSearchParams({
-            value: 100,
-            from: &#x27;lb&#x27;,
-            to: &#x27;kg&#x27;
-        });
-
-    const response = await fetch(`${API_URL}?${params}`, {
+    const response = await fetch(API_URL, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY

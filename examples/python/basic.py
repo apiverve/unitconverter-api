@@ -17,14 +17,11 @@ def call_unitconverter_api():
     Make a GET request to the Unit Converter API
     """
     try:
-        # Query parameters
-        params &#x3D; {&#x27;value&#x27;: 100, &#x27;from&#x27;: &#x27;lb&#x27;, &#x27;to&#x27;: &#x27;kg&#x27;}
-
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers, params=params)
+        response = requests.get(API_URL, headers=headers)
 
         # Raise exception for HTTP errors
         response.raise_for_status()

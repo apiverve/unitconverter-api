@@ -44,7 +44,11 @@ from apiverve_unitconverter.apiClient import UnitconverterAPIClient
 # Initialize the client with your APIVerve API key
 api = UnitconverterAPIClient("[YOUR_API_KEY]")
 
-query = { "value": 100, "from": "lb", "to": "kg" }
+query = {
+    "value": 100,
+    "from": "lb",
+    "to": "kg"
+}
 
 try:
     # Make the API call
@@ -82,7 +86,11 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "value": 100, "from": "lb", "to": "kg" }
+query = {
+    "value": 100,
+    "from": "lb",
+    "to": "kg"
+}
 ```
 
 ###### Simple Request
@@ -140,7 +148,11 @@ from apiverve_unitconverter.apiClient import UnitconverterAPIClient, Unitconvert
 
 api = UnitconverterAPIClient("[YOUR_API_KEY]")
 
-query = { "value": 100, "from": "lb", "to": "kg" }
+query = {
+    "value": 100,
+    "from": "lb",
+    "to": "kg"
+}
 
 try:
     result = api.execute(query)
@@ -161,7 +173,11 @@ from apiverve_unitconverter.apiClient import UnitconverterAPIClient, Unitconvert
 
 api = UnitconverterAPIClient("[YOUR_API_KEY]")
 
-query = { "value": 100, "from": "lb", "to": "kg" }
+query = {
+    "value": 100,
+    "from": "lb",
+    "to": "kg"
+}
 
 try:
     result = api.execute(query)
@@ -195,7 +211,11 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_unitconverter.apiClient import UnitconverterAPIClient, UnitconverterAPIClientError
 
-query = { "value": 100, "from": "lb", "to": "kg" }
+query = {
+    "value": 100,
+    "from": "lb",
+    "to": "kg"
+}
 
 # Using context manager ensures proper cleanup
 with UnitconverterAPIClient("[YOUR_API_KEY]") as api:
@@ -221,7 +241,11 @@ from apiverve_unitconverter.apiClient import UnitconverterAPIClient
 # Enable debug mode
 api = UnitconverterAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "value": 100, "from": "lb", "to": "kg" }
+query = {
+    "value": 100,
+    "from": "lb",
+    "to": "kg"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -236,8 +260,13 @@ from apiverve_unitconverter.apiClient import UnitconverterAPIClient
 
 api = UnitconverterAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "value": 100,
+    "from": "lb",
+    "to": "kg"
+}
+
 try:
-    query = { "value": 100, "from": "lb", "to": "kg" }
     result = api.execute(query)
     print(result)
 finally:

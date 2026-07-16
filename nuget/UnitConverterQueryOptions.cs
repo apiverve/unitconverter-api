@@ -14,7 +14,7 @@ namespace APIVerve.API.UnitConverter
         /// The value to convert
         /// </summary>
         [JsonProperty("value")]
-        public string Value { get; set; }
+        public double Value { get; set; }
 
         /// <summary>
         /// The unit to convert from

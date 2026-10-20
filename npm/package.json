@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/unitconverter",
-  "version": "1.2.0",
-  "description": "Unit Converter is a simple tool for converting units. It returns the converted value.",
+  "version": "1.2.2",
+  "description": "Unit Converter converts values between different units of measurement. Pass a numeric value with source and target unit identifiers to get the converted result and unit abbreviations.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "unit converter", "unit conversion", "unit converter api", "unit conversion api", "unit converter tool"
+    "unit converter api", "unit conversion api", "free unit conversion api", "conversion api", "measurement conversion"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/unitconverter-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/unitconverter?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/unitconverter?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",

@@ -2,8 +2,9 @@ openapi: 3.0.4
 info:
   title: Unit Converter
   description: >-
-    Unit Converter is a simple tool for converting units. It returns the
-    converted value.
+    Unit Converter converts values between different units of measurement. Pass
+    a numeric value with source and target unit identifiers to get the converted
+    result and unit abbreviations.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +19,7 @@ servers:
 paths:
   /v1/unitconverter:
     get:
-      summary: Convert Units
+      summary: Unit Converter
       description: Convert units from one to another
       operationId: unitconverter
       parameters:

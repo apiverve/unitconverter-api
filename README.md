@@ -1,13 +1,13 @@
-# [Unit Converter API](https://apiverve.com/marketplace/unitconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Unit Converter API](https://apiverve.com/marketplace/unitconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Unit Converter is a simple tool for converting units. It returns the converted value.
+Unit Converter converts values between different units of measurement. Pass a numeric value with source and target unit identifiers to get the converted result and unit abbreviations.
 
 The Unit Converter API provides a simple, reliable way to integrate unit converter functionality into your applications. Built for developers who need production-ready unit converter capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/unitconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/unitconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/unitconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/unitconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -163,7 +163,7 @@ go get github.com/apiverve/unitconverter-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Unit Converter API](https://apiverve.com/marketplace/unitconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Unit Converter API](https://apiverve.com/marketplace/unitconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/unitconverter](https://docs.apiverve.com/ref/unitconverter)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -193,11 +193,48 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Unit Converter API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "result": {
+      "result": 45.36,
+      "from": "100 lb",
+      "to": "kg"
+    },
+    "unitDefinitions": {
+      "from": {
+        "abbr": "lb",
+        "measure": "mass",
+        "system": "imperial",
+        "singular": "Pound",
+        "plural": "Pounds"
+      },
+      "to": {
+        "abbr": "kg",
+        "measure": "mass",
+        "system": "metric",
+        "singular": "Kilogram",
+        "plural": "Kilograms"
+      }
+    }
+  }
 }
 ```
 
@@ -205,7 +242,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Unit Converter API](https://apiverve.com/marketplace/unitconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Unit Converter API](https://apiverve.com/marketplace/unitconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

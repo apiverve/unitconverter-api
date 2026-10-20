@@ -2,17 +2,17 @@ from setuptools import setup, find_packages
 
 setup(
     name='apiverve_unitconverter',
-    version='1.1.14',
+    version='1.2.2',
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
         'requests',
         'setuptools'
     ],
-    description='Unit Converter is a simple tool for converting units. It returns the converted value.',
+    description='Unit Converter converts values between different units of measurement. Pass a numeric value with source and target unit identifiers to get the converted result and unit abbreviations.',
     author='APIVerve',
     author_email='hello@apiverve.com',
-    url='https://apiverve.com/marketplace/unitconverter?utm_source=pypi&utm_medium=homepage',
+    url='https://apiverve.com/marketplace/unitconverter?utm_source=pypi&utm_medium=referral&utm_content=homepage',
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',

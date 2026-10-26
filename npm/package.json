@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/unitconverter",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Unit Converter converts values between different units of measurement. Pass a numeric value with source and target unit identifiers to get the converted result and unit abbreviations.",
   "main": "index.js",
   "types": "index.d.ts",

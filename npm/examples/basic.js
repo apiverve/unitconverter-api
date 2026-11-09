@@ -17,7 +17,9 @@ const api = new unitconverterAPI({
 var query = {
   value: 100,
   from: "lb",
-  to: "kg"
+  to: "kg",
+  precision: 2,
+  conversions: false
 };
 
 // Make the API request using callback

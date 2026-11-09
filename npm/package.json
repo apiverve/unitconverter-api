@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/unitconverter",
-  "version": "1.2.4",
-  "description": "Unit Converter converts values between different units of measurement. Pass a numeric value with source and target unit identifiers to get the converted result and unit abbreviations.",
+  "version": "1.2.5",
+  "description": "Unit Converter converts values between 185 units across 23 measures, from length, mass and volume to speed, pressure, data size, energy and electrical units. Pass a numeric value with source and target unit codes to get the converted result and unit abbreviations. On paid plans, precision sets the decimal places and conversions=true adds the value in every unit of the same measure.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,

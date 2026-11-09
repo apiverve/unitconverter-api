@@ -27,6 +27,18 @@ declare module '@apiverve/unitconverter' {
   interface UnitConverterData {
       result:          Result;
       unitDefinitions: UnitDefinitions;
+      conversions:     Conversions;
+  }
+  
+  interface Conversions {
+      mcg: number | null;
+      mg:  number | null;
+      g:   number | null;
+      kg:  number | null;
+      mt:  number | null;
+      oz:  number | null;
+      lb:  number | null;
+      t:   number | null;
   }
   
   interface Result {

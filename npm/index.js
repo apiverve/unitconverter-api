@@ -30,7 +30,7 @@ class unitconverterWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/unitconverter';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"value":{"type":"number","required":true},"from":{"type":"string","required":true},"to":{"type":"string","required":true}};
+        this.validationRules = {"value":{"type":"number","required":true},"from":{"type":"string","required":true},"to":{"type":"string","required":true},"precision":{"type":"integer","required":false,"min":0,"max":10,"default":2},"conversions":{"type":"boolean","required":false,"default":false}};
     }
 
     /**

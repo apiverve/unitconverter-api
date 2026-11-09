@@ -1,6 +1,6 @@
 # Unit Converter API
 
-Unit Converter converts values between different units of measurement. Pass a numeric value with source and target unit identifiers to get the converted result and unit abbreviations.
+Unit Converter converts values between 185 units across 23 measures, from length, mass and volume to speed, pressure, data size, energy and electrical units. Pass a numeric value with source and target unit codes to get the converted result and unit abbreviations. On paid plans, precision sets the decimal places and conversions=true adds the value in every unit of the same measure.
 
 [![npm version](https://img.shields.io/npm/v/@apiverve/unitconverter.svg)](https://www.npmjs.com/package/@apiverve/unitconverter)
 
@@ -59,7 +59,9 @@ Using the API is simple. All you have to do is make a request. The API will retu
 var query = {
   value: 100,
   from: "lb",
-  to: "kg"
+  to: "kg",
+  precision: 2,
+  conversions: false
 };
 
 api.execute(query, function (error, data) {
@@ -81,7 +83,9 @@ You can also use promises to make requests. The API returns a promise that you c
 var query = {
   value: 100,
   from: "lb",
-  to: "kg"
+  to: "kg",
+  precision: 2,
+  conversions: false
 };
 
 api.execute(query)
@@ -104,7 +108,9 @@ async function makeRequest() {
     var query = {
   value: 100,
   from: "lb",
-  to: "kg"
+  to: "kg",
+  precision: 2,
+  conversions: false
 };
 
     try {
@@ -145,6 +151,16 @@ async function makeRequest() {
         "singular": "Kilogram",
         "plural": "Kilograms"
       }
+    },
+    "conversions": {
+      "mcg": 45359200000,
+      "mg": 45359200,
+      "g": 45359.2,
+      "kg": 45.36,
+      "mt": 0.05,
+      "oz": 1600,
+      "lb": 100,
+      "t": 0.05
     }
   }
 }

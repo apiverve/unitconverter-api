@@ -2,9 +2,12 @@ openapi: 3.0.4
 info:
   title: Unit Converter
   description: >-
-    Unit Converter converts values between different units of measurement. Pass
-    a numeric value with source and target unit identifiers to get the converted
-    result and unit abbreviations.
+    Unit Converter converts values between 185 units across 23 measures, from
+    length, mass and volume to speed, pressure, data size, energy and electrical
+    units. Pass a numeric value with source and target unit codes to get the
+    converted result and unit abbreviations. On paid plans, precision sets the
+    decimal places and conversions=true adds the value in every unit of the same
+    measure.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -20,7 +23,9 @@ paths:
   /v1/unitconverter:
     get:
       summary: Unit Converter
-      description: Convert units from one to another
+      description: >-
+        Convert units from one to another, optionally with more decimal places
+        or the value in every unit of the same measure
       operationId: unitconverter
       parameters:
         - name: value
@@ -44,6 +49,20 @@ paths:
           required: true
           description: The unit to convert to
           example: kg
+        - name: precision
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: Decimal places to round results to, between 0 and 10 (default 2)
+          example: 4
+        - name: conversions
+          in: query
+          schema:
+            type: boolean
+          required: false
+          description: Also return the value converted into every unit of the same measure
+          example: true
       responses:
         '200':
           description: Successful Response
@@ -82,6 +101,15 @@ paths:
                       system: metric
                       singular: Kilogram
                       plural: Kilograms
+                  conversions:
+                    mcg: 45359200000
+                    mg: 45359200
+                    g: 45359.2
+                    kg: 45.36
+                    mt: 0.05
+                    oz: 1600
+                    lb: 100
+                    t: 0.05
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':

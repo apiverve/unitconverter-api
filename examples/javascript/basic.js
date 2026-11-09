@@ -17,7 +17,8 @@ async function callUnitConverterAPI() {
     const params &#x3D; new URLSearchParams({
             value: 100,
             from: &#x27;lb&#x27;,
-            to: &#x27;kg&#x27;
+            to: &#x27;kg&#x27;,
+            conversions: true
         });
 
     const response = await fetch(`${API_URL}?${params}`, {

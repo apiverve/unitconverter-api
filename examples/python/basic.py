@@ -18,7 +18,7 @@ def call_unitconverter_api():
     """
     try:
         # Query parameters
-        params &#x3D; {&#x27;value&#x27;: 100, &#x27;from&#x27;: &#x27;lb&#x27;, &#x27;to&#x27;: &#x27;kg&#x27;}
+        params &#x3D; {&#x27;value&#x27;: 100, &#x27;from&#x27;: &#x27;lb&#x27;, &#x27;to&#x27;: &#x27;kg&#x27;, &#x27;conversions&#x27;: true}
 
         headers = {
             'x-api-key': API_KEY

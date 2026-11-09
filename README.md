@@ -1,6 +1,6 @@
 # [Unit Converter API](https://apiverve.com/marketplace/unitconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Unit Converter converts values between different units of measurement. Pass a numeric value with source and target unit identifiers to get the converted result and unit abbreviations.
+Unit Converter converts values between 185 units across 23 measures, from length, mass and volume to speed, pressure, data size, energy and electrical units. Pass a numeric value with source and target unit codes to get the converted result and unit abbreviations. On paid plans, precision sets the decimal places and conversions&#x3D;true adds the value in every unit of the same measure.
 
 The Unit Converter API provides a simple, reliable way to integrate unit converter functionality into your applications. Built for developers who need production-ready unit converter capabilities without the complexity of building from scratch.
 
@@ -33,7 +33,8 @@ async function callUnitConverterAPI() {
         const params = new URLSearchParams({
             value: 100,
             from: 'lb',
-            to: 'kg'
+            to: 'kg',
+            conversions: true
         });
 
         const response = await fetch(`https://api.apiverve.com/v1/unitconverter?${params}`, {
@@ -56,7 +57,7 @@ callUnitConverterAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/unitconverter?value=100&from=lb&to=kg" \
+curl -X GET "https://api.apiverve.com/v1/unitconverter?value=100&from=lb&to=kg&conversions=true" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -233,6 +234,16 @@ A real response from the Unit Converter API:
         "singular": "Kilogram",
         "plural": "Kilograms"
       }
+    },
+    "conversions": {
+      "mcg": 45359200000,
+      "mg": 45359200,
+      "g": 45359.2,
+      "kg": 45.36,
+      "mt": 0.05,
+      "oz": 1600,
+      "lb": 100,
+      "t": 0.05
     }
   }
 }

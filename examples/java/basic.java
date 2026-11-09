@@ -17,6 +17,7 @@ public class BasicExample {
         parameters.put(&quot;value&quot;, 100);
         parameters.put(&quot;from&quot;, &quot;lb&quot;);
         parameters.put(&quot;to&quot;, &quot;kg&quot;);
+        parameters.put(&quot;conversions&quot;, true);
 
             // Execute the API request
             APIResponse response = client.execute(parameters);

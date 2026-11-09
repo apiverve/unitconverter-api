@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "apiverve_unitconverter"
-  spec.version       = "1.2.4"
+  spec.version       = "1.2.5"
   spec.authors       = ["APIVerve"]
   spec.email         = ["hello@apiverve.com"]
 
   spec.summary       = "Unit Converter API - Ruby Client"
-  spec.description   = "Unit Converter converts values between different units of measurement. Pass a numeric value with source and target unit identifiers to get the converted result and unit abbreviations."
+  spec.description   = "Unit Converter converts values between 185 units across 23 measures, from length, mass and volume to speed, pressure, data size, energy and electrical units. Pass a numeric value with source and target unit codes to get the converted result and unit abbreviations. On paid plans, precision sets the decimal places and conversions=true adds the value in every unit of the same measure."
   spec.homepage      = "https://apiverve.com/marketplace/unitconverter?utm_source=ruby&utm_medium=referral&utm_content=homepage"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 2.7.0"

@@ -10,7 +10,7 @@ module APIVerve
     #
     # @example Basic usage
     #   client = APIVerve::Unitconverter::Client.new(api_key: "your_api_key")
-    #   response = client.execute({ value: 100, from: "lb", to: "kg" })
+    #   response = client.execute({ value: 100, from: "lb", to: "kg", precision: 2, conversions: true })
     #   puts response
     #
     # @see https://apiverve.com/marketplace/unitconverter?utm_source=ruby&utm_medium=referral&utm_content=readme
@@ -19,7 +19,7 @@ module APIVerve
       DEFAULT_TIMEOUT = 30
 
       # Validation rules for parameters
-      VALIDATION_RULES = { 'value' => { type: 'number', required: true }, 'from' => { type: 'string', required: true }, 'to' => { type: 'string', required: true } }
+      VALIDATION_RULES = { 'value' => { type: 'number', required: true }, 'from' => { type: 'string', required: true }, 'to' => { type: 'string', required: true }, 'precision' => { type: 'integer', required: false, min: 0, max: 10 }, 'conversions' => { type: 'boolean', required: false } }
 
       # Format validation patterns
       FORMAT_PATTERNS = {

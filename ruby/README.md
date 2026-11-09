@@ -1,6 +1,6 @@
 # Unit Converter API - Ruby Gem
 
-Unit Converter converts values between different units of measurement. Pass a numeric value with source and target unit identifiers to get the converted result and unit abbreviations.
+Unit Converter converts values between 185 units across 23 measures, from length, mass and volume to speed, pressure, data size, energy and electrical units. Pass a numeric value with source and target unit codes to get the converted result and unit abbreviations. On paid plans, precision sets the decimal places and conversions=true adds the value in every unit of the same measure.
 
 ## Installation
 
@@ -38,7 +38,9 @@ client = APIVerve::Unitconverter::Client.new(api_key: "YOUR_API_KEY")
 response = client.execute({
   value: 100,
   from: "lb",
-  to: "kg"
+  to: "kg",
+  precision: 2,
+  conversions: true
 })
 
 # Print the response
@@ -50,7 +52,7 @@ puts response
 
 ```ruby
 begin
-  response = client.execute({ value: 100, from: "lb", to: "kg" })
+  response = client.execute({ value: 100, from: "lb", to: "kg", precision: 2, conversions: true })
   puts response["data"]
 rescue APIVerve::Unitconverter::ValidationError => e
   puts "Validation error: #{e.errors.join(', ')}"
@@ -97,6 +99,16 @@ client = APIVerve::Unitconverter::Client.new(
         "singular": "Kilogram",
         "plural": "Kilograms"
       }
+    },
+    "conversions": {
+      "mcg": 45359200000,
+      "mg": 45359200,
+      "g": 45359.2,
+      "kg": 45.36,
+      "mt": 0.05,
+      "oz": 1600,
+      "lb": 100,
+      "t": 0.05
     }
   }
 }

@@ -15,7 +15,7 @@ use APIVerve\Unitconverter\Exceptions\ValidationException;
  * @example Basic usage
  * ```php
  * $client = new Client('your_api_key');
- * $response = $client->execute(['value' => 100, 'from' => 'lb', 'to' => 'kg']);
+ * $response = $client->execute(['value' => 100, 'from' => 'lb', 'to' => 'kg', 'precision' => 2, 'conversions' => true]);
  * print_r($response);
  * ```
  *
@@ -36,7 +36,9 @@ class Client
     private const VALIDATION_RULES = [
         'value' => ['type' => 'number', 'required' => true],
         'from' => ['type' => 'string', 'required' => true],
-        'to' => ['type' => 'string', 'required' => true]
+        'to' => ['type' => 'string', 'required' => true],
+        'precision' => ['type' => 'integer', 'required' => false, 'min' => 0, 'max' => 10],
+        'conversions' => ['type' => 'boolean', 'required' => false]
     ];
 
     /**

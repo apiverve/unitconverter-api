@@ -1,10 +1,10 @@
 [project]
 name = "apiverve-unitconverter"
-version = "1.2.4"
+version = "1.2.5"
 authors = [
   { name="APIVerve", email="hello@apiverve.com" },
 ]
-description = "Unit Converter converts values between different units of measurement. Pass a numeric value with source and target unit identifiers to get the converted result and unit abbreviations."
+description = "Unit Converter converts values between 185 units across 23 measures, from length, mass and volume to speed, pressure, data size, energy and electrical units. Pass a numeric value with source and target unit codes to get the converted result and unit abbreviations. On paid plans, precision sets the decimal places and conversions=true adds the value in every unit of the same measure."
 keywords = ["unit converter api", "unit conversion api", "free unit conversion api", "conversion api", "measurement conversion"]
 readme = "README.md"
 requires-python = ">=3.9"

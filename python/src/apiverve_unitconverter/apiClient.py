@@ -26,7 +26,9 @@ class UnitconverterAPIClient:
     VALIDATION_RULES = {
         "value": {"type": "number", "required": True},
         "from": {"type": "string", "required": True},
-        "to": {"type": "string", "required": True}
+        "to": {"type": "string", "required": True},
+        "precision": {"type": "integer", "required": False, "min": 0, "max": 10, "default": 2},
+        "conversions": {"type": "boolean", "required": False, "default": False}
     }
 
     # Format validation patterns

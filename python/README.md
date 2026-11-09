@@ -1,7 +1,7 @@
 Unit Converter API
 ============
 
-Unit Converter converts values between different units of measurement. Pass a numeric value with source and target unit identifiers to get the converted result and unit abbreviations.
+Unit Converter converts values between 185 units across 23 measures, from length, mass and volume to speed, pressure, data size, energy and electrical units. Pass a numeric value with source and target unit codes to get the converted result and unit abbreviations. On paid plans, precision sets the decimal places and conversions=true adds the value in every unit of the same measure.
 
 
 [![PyPI version](https://img.shields.io/pypi/v/apiverve-unitconverter.svg)](https://pypi.org/project/apiverve-unitconverter/)
@@ -46,7 +46,9 @@ api = UnitconverterAPIClient("[YOUR_API_KEY]")
 query = {
     "value": 100,
     "from": "lb",
-    "to": "kg"
+    "to": "kg",
+    "precision": 2,
+    "conversions": true
 }
 
 try:
@@ -88,7 +90,9 @@ Using the API client, you can perform requests to the API.
 query = {
     "value": 100,
     "from": "lb",
-    "to": "kg"
+    "to": "kg",
+    "precision": 2,
+    "conversions": true
 }
 ```
 
@@ -129,6 +133,16 @@ print(result)
         "singular": "Kilogram",
         "plural": "Kilograms"
       }
+    },
+    "conversions": {
+      "mcg": 45359200000,
+      "mg": 45359200,
+      "g": 45359.2,
+      "kg": 45.36,
+      "mt": 0.05,
+      "oz": 1600,
+      "lb": 100,
+      "t": 0.05
     }
   }
 }
@@ -150,7 +164,9 @@ api = UnitconverterAPIClient("[YOUR_API_KEY]")
 query = {
     "value": 100,
     "from": "lb",
-    "to": "kg"
+    "to": "kg",
+    "precision": 2,
+    "conversions": true
 }
 
 try:
@@ -175,7 +191,9 @@ api = UnitconverterAPIClient("[YOUR_API_KEY]")
 query = {
     "value": 100,
     "from": "lb",
-    "to": "kg"
+    "to": "kg",
+    "precision": 2,
+    "conversions": true
 }
 
 try:
@@ -213,7 +231,9 @@ from apiverve_unitconverter.apiClient import UnitconverterAPIClient, Unitconvert
 query = {
     "value": 100,
     "from": "lb",
-    "to": "kg"
+    "to": "kg",
+    "precision": 2,
+    "conversions": true
 }
 
 # Using context manager ensures proper cleanup
@@ -243,7 +263,9 @@ api = UnitconverterAPIClient("[YOUR_API_KEY]", debug=True)
 query = {
     "value": 100,
     "from": "lb",
-    "to": "kg"
+    "to": "kg",
+    "precision": 2,
+    "conversions": true
 }
 
 # Debug information will be printed to console
@@ -262,7 +284,9 @@ api = UnitconverterAPIClient("[YOUR_API_KEY]")
 query = {
     "value": 100,
     "from": "lb",
-    "to": "kg"
+    "to": "kg",
+    "precision": 2,
+    "conversions": true
 }
 
 try:

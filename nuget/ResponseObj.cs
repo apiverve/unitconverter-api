@@ -37,6 +37,36 @@ namespace APIVerve.API.UnitConverter
 
         [JsonProperty("unitDefinitions")]
         public UnitDefinitions UnitDefinitions { get; set; }
+
+        [JsonProperty("conversions")]
+        public Conversions Conversions { get; set; }
+    }
+
+    public partial class Conversions
+    {
+        [JsonProperty("mcg")]
+        public long? Mcg { get; set; }
+
+        [JsonProperty("mg")]
+        public long? Mg { get; set; }
+
+        [JsonProperty("g")]
+        public double? G { get; set; }
+
+        [JsonProperty("kg")]
+        public double? Kg { get; set; }
+
+        [JsonProperty("mt")]
+        public double? Mt { get; set; }
+
+        [JsonProperty("oz")]
+        public long? Oz { get; set; }
+
+        [JsonProperty("lb")]
+        public long? Lb { get; set; }
+
+        [JsonProperty("t")]
+        public double? T { get; set; }
     }
 
     public partial class Result

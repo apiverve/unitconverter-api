@@ -69,7 +69,9 @@ namespace APIVerve.API.UnitConverter
         {
             { "value", new ValidationRule { Type = "number", Required = true } },
             { "from", new ValidationRule { Type = "string", Required = true } },
-            { "to", new ValidationRule { Type = "string", Required = true } }
+            { "to", new ValidationRule { Type = "string", Required = true } },
+            { "precision", new ValidationRule { Type = "integer", Required = false, Min = 0, Max = 10 } },
+            { "conversions", new ValidationRule { Type = "boolean", Required = false } }
         };
 
         /// <summary>Format validation patterns</summary>

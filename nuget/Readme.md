@@ -1,7 +1,7 @@
 Unit Converter API
 ============
 
-Unit Converter converts values between different units of measurement. Pass a numeric value with source and target unit identifiers to get the converted result and unit abbreviations.
+Unit Converter converts values between 185 units across 23 measures, from length, mass and volume to speed, pressure, data size, energy and electrical units. Pass a numeric value with source and target unit codes to get the converted result and unit abbreviations. On paid plans, precision sets the decimal places and conversions=true adds the value in every unit of the same measure.
 
 
 [![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.UnitConverter.svg)](https://www.nuget.org/packages/APIVerve.API.UnitConverter)
@@ -62,7 +62,9 @@ class Program
         var queryOptions = new UnitConverterQueryOptions {
             Value = 100,
             From = "lb",
-            To = "kg"
+            To = "kg",
+            Precision = 2,
+            Conversions = true
         };
 
         // Make the API call
@@ -128,7 +130,9 @@ public class Example
         var queryOptions = new UnitConverterQueryOptions {
             Value = 100,
             From = "lb",
-            To = "kg"
+            To = "kg",
+            Precision = 2,
+            Conversions = true
         };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
@@ -162,7 +166,9 @@ public class Example
         var queryOptions = new UnitConverterQueryOptions {
             Value = 100,
             From = "lb",
-            To = "kg"
+            To = "kg",
+            Precision = 2,
+            Conversions = true
         };
 
         var response = apiClient.Execute(queryOptions);
@@ -201,7 +207,9 @@ public class Example
         var queryOptions = new UnitConverterQueryOptions {
             Value = 100,
             From = "lb",
-            To = "kg"
+            To = "kg",
+            Precision = 2,
+            Conversions = true
         };
 
         try
@@ -259,7 +267,9 @@ public class Example
         var queryOptions = new UnitConverterQueryOptions {
             Value = 100,
             From = "lb",
-            To = "kg"
+            To = "kg",
+            Precision = 2,
+            Conversions = true
         };
 
         try
@@ -302,7 +312,9 @@ apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 var queryOptions = new UnitConverterQueryOptions {
     Value = 100,
     From = "lb",
-    To = "kg"
+    To = "kg",
+    Precision = 2,
+    Conversions = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -330,7 +342,9 @@ apiClient.SetLogger(message =>
 var queryOptions = new UnitConverterQueryOptions {
     Value = 100,
     From = "lb",
-    To = "kg"
+    To = "kg",
+    Precision = 2,
+    Conversions = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -350,7 +364,9 @@ apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (defau
 var queryOptions = new UnitConverterQueryOptions {
     Value = 100,
     From = "lb",
-    To = "kg"
+    To = "kg",
+    Precision = 2,
+    Conversions = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -364,7 +380,9 @@ The API client implements `IDisposable` for proper resource cleanup:
 var queryOptions = new UnitConverterQueryOptions {
     Value = 100,
     From = "lb",
-    To = "kg"
+    To = "kg",
+    Precision = 2,
+    Conversions = true
 };
 
 using (var apiClient = new UnitConverterAPIClient("[YOUR_API_KEY]"))
@@ -404,6 +422,16 @@ using (var apiClient = new UnitConverterAPIClient("[YOUR_API_KEY]"))
         "singular": "Kilogram",
         "plural": "Kilograms"
       }
+    },
+    "conversions": {
+      "mcg": 45359200000,
+      "mg": 45359200,
+      "g": 45359.2,
+      "kg": 45.36,
+      "mt": 0.05,
+      "oz": 1600,
+      "lb": 100,
+      "t": 0.05
     }
   }
 }
